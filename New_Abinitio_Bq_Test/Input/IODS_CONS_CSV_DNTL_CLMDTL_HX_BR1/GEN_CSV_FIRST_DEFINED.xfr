@@ -1,0 +1,10 @@
+include "~$AI_XFR/transform_function_library.xfr";
+// aetna/IODS_Pilot/table_adaptor.xfr
+out :: reformat(in) =
+begin
+  
+  out.(*, form == 'string') :0: re_replace(re_replace(in.*, "[^\x20-\x7E]", " "),"[\\r]"," ");
+  out.(*, form != 'string') :1: in.*;
+  out.(*, form == 'string') :3: first_defined(in.*,'');
+  out.(*, form != 'string') :4: first_defined(in.*,0);
+end

@@ -1,0 +1,16 @@
+include "~$AI_XFR/transform_function_library.xfr";
+// aetna/111423/CSVConsolidation/IODS_CONS_CSV_DNTL_CLMDTL_HX_BR1_V353S6P2.xfr
+// XFR Generated: 2023-11-14 15:26:18 Version: 21743
+
+
+constant string('') FILECTLNUM parameter = '';
+
+out::reformat(in)=
+begin
+  out.* :: in.*;
+  out.AUDIT_INSERT_TS :: (datetime('YYYY-MM-DD HH24:MI:SS.nnnnnn')) now1();
+  out.AUDIT_UPDATE_TS :: (datetime('YYYY-MM-DD HH24:MI:SS.nnnnnn')) now1();
+  out.INSERT_FILE_ID :: (decimal(''))(FILECTLNUM);
+  out.UPDATE_FILE_ID :: (decimal('\n'))(0);
+end;
+

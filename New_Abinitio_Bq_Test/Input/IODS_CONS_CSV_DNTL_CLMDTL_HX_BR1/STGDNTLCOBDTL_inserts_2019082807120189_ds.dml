@@ -1,0 +1,13 @@
+// aetna/111423/CSVConsolidation/STGDNTLCOBDTL_inserts_2019082807120189_ds.dml
+// Dataset DML Generated: 2023-11-14 15:24:59 Version: 21743
+record
+  decimal("") AK_SUBMT_SVC_LN_NO;
+  string(8) AK_UCK_ID;
+  string(1) AK_UCK_ID_PREFIX_CD;
+  decimal("") AK_UCK_ID_SEGMENT_NO;
+  decimal("") AK_COB_SVLNADI_ID;
+  datetime('YYYY-MM-DD HH24:MI:SS.nnnnnn') AUDIT_INSERT_TS /*<none> Searchable? N\(20)*/;
+  decimal('\n') INSERT_FILE_ID /*<none> Searchable? N\(20)*/;
+end
+
+

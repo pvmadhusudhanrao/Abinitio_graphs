@@ -1,0 +1,12 @@
+/* DML Generated for SQL: SELECT * FROM edp_hcb_iods_stg.STG_CONS_CSV_DENTAL_CLM_DTL_HX
+ * On: Sat Aug 24 02:34:22 2024
+ */
+record
+  integer(8) AK_SUBMT_SVC_LN_NO /*INT64 NOT NULL*/;
+  utf8 string(unsigned integer(4)) AK_UCK_ID /*STRING NOT NULL*/;
+  utf8 string(unsigned integer(4)) AK_UCK_ID_PREFIX_CD /*STRING NOT NULL*/;
+  integer(8) AK_UCK_ID_SEGMENT_NO /*INT64 NOT NULL*/;
+  datetime("YYYY-MM-DD HH24:MI:SS.NNNNNN") AUDIT_INSERT_TS = NULL /*TIMESTAMP*/;
+  integer(8) INSERT_FILE_ID /*INT64 NOT NULL*/;
+end
+

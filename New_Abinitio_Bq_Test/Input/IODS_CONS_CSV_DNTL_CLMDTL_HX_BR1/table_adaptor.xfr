@@ -1,0 +1,9 @@
+include "~$AI_XFR/transform_function_library.xfr";
+// aetna/071123/table_adaptor.xfr
+out :: reformat(in) =
+begin
+  // trim_strings_if_not_blanks() is in transform_function_library.xfr.
+  out.(*, form == 'string') :2: (in.*); 
+  out.(*, form != 'string') :1: in.*;
+end
+
